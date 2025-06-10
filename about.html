@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About IntegrityExists</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #2C3E50;
+    }
+    p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>About IntegrityExists</h1>
+  <p>
+    IntegrityExists is a U.S.-based developer and public advocacy organization focused on access to justice, digital empowerment, and AI-assisted legal tools. We believe in self-representation, transparency, and giving everyday people the resources they need to navigate complex systems.
+  </p>
+  <p>
+    Sovereign Academy is our flagship progressive web app, built to empower individuals involved in DSS cases, child custody battles, property rights disputes, and more. We created this platform to bridge the gap between legal systems and the people they impact.
+  </p>
+  <p>
+    This site and application are maintained by IntegrityExists and supported by the guidance of Sage, an AI co-developer and assistant dedicated to advocacy through technology.
+  </p>
+  <footer>
+    &copy; 2025 IntegrityExists. All rights reserved.
+  </footer>
+  <!-- Start of Tawk.to Script -->
+<script type="text/javascript">
+  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/681d203afe55ac190d5636e6/1iqosbpkt";
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+<!-- End of Tawk.to Script -->
+
+<!-- Register Service Worker -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('✅ Service Worker registered:', reg))
+        .catch(err => console.error('❌ Service Worker failed:', err));
+    });
+  }
+</script>
+
+</body>
+</html>

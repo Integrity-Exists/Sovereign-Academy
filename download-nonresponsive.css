@@ -1,0 +1,19 @@
+/* responsive.css */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header, footer {
+        padding: 0.5em;
+    }
+
+    main {
+        padding: 1em;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
+}

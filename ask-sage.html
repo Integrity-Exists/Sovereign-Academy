@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192x192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/icon-512x512.png" />
+  <title>Sovereign Academy - Ask Sage</title>
+  <style>
+    :root {
+      --primary-color: #2C3E50;
+      --secondary-color: #F4D03F;
+      --accent-color: #ECF0F1;
+    }
+    body {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .navbar {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 1rem;
+      font-size: 24px;
+      text-align: center;
+    }
+    .navbar a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    h1 {
+      color: var(--primary-color);
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "⚖️ ";
+      margin-right: 5px;
+    }
+    form {
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    p, h2 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="court-prep.html">Court Prep</a> |
+    <a href="dss-defense.html">DSS Defense</a>
+  </div>
+
+  <h1>Ask Sage</h1>
+
+  <p><strong>Need help navigating court, DSS, housing problems, custody disputes, or criminal charges?</strong><br>
+  You're not alone. <strong>Ask Sage</strong> is your built-in AI companion — trained by Gina to help you understand your options, prepare documents, and take your power back. Ask anything. Any time.</p>
+
+  <h2>💬 Submit a Question</h2>
+  <form action="https://formspree.io/f/xeogkwoe" method="POST">
+    <label for="name">Your Name:</label><br>
+    <input type="text" name="name" id="name" required><br>
+    <label for="email">Your Email:</label><br>
+    <input type="email" name="_replyto" id="email" required><br>
+    <label for="question">Your Question:</label><br>
+    <textarea name="message" id="question" rows="5" required></textarea><br>
+    <button type="submit">Submit Question</button>
+  </form>
+
+  <h2>🔍 What Can I Ask Sage?</h2>
+  <ul>
+    <li>📁 How do I file a custody modification?</li>
+    <li>🏠 What are my rights if my landlord shuts off the water?</li>
+    <li>⚖️ What does a Motion to Dismiss look like?</li>
+    <li>📜 Can I subpoena DSS records?</li>
+    <li>🔫 How do I get my gun rights back after a felony?</li>
+    <li>🚔 Do I have to let police search my home?</li>
+    <li>🧠 What's the difference between Pro Se and Sui Juris?</li>
+  </ul>
+
+  <p><em>Don’t see your issue? Type it in the form — Sage will figure it out with you.</em></p>
+  <p style="text-align: center;"><a href="index.html">⬅️ Return to Home</a></p>
+
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/681d203afe55ac190d5636e6/1iqosbpkt';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!-- End of Tawk.to Script -->
+
+
+</body>
+</html>

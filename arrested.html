@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What to Do If You're Arrested</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    p, ul {
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+    #sageChatWindow {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      height: 400px;
+      border: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>What to Do If You're Arrested</h1>
+
+  <p>Being arrested can be a frightening experience, but knowing your rights and how to respond can make a significant difference. Here's what you should do:</p>
+
+  <h2>1. Remain Calm and Composed</h2>
+  <p>Stay calm and do not resist arrest, even if you believe it's unjust. Resisting can lead to additional charges and potential harm.</p>
+
+  <h2>2. Exercise Your Right to Remain Silent</h2>
+  <p>You have the right to remain silent. Clearly state, "I am exercising my right to remain silent." Do not provide explanations or excuses.</p>
+
+  <h2>3. Request an Attorney Immediately</h2>
+  <p>Ask for a lawyer as soon as possible. Say, "I want to speak to a lawyer." The police must stop questioning you until your attorney is present.</p>
+
+  <h2>4. Do Not Consent to Searches</h2>
+  <p>Politely refuse any searches of your person, vehicle, or property. Say, "I do not consent to a search."</p>
+
+  <h2>5. Know Your Rights</h2>
+  <ul>
+    <li>You have the right to a local phone call. If you call a lawyer, the police cannot listen.</li>
+    <li>You have the right to know the charges against you.</li>
+    <li>You have the right to a fair trial.</li>
+  </ul>
+
+  <h2>6. Document the Encounter</h2>
+  <p>As soon as possible, write down everything you remember, including officers' badge numbers, patrol car numbers, and any other relevant details.</p>
+
+  <h2>7. Do Not Discuss Your Case</h2>
+  <p>Avoid discussing your case with anyone other than your attorney. This includes phone calls from jail, as they may be recorded.</p>
+
+  <h2>8. Follow Legal Advice</h2>
+  <p>Trust your attorney's guidance throughout the legal process. They are there to protect your rights and advocate on your behalf.</p>
+
+  <!-- Embedded Sage Chatbot -->
+  <iframe id="sageChatWindow" src="sage-chatbot.html"></iframe>
+
+  <!-- Start of Tawk.to Script -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/681d203afe55ac190d5636e6/1iqosbpkt";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+  <!-- Register Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(reg => console.log('✅ Service Worker registered:', reg))
+          .catch(err => console.error('❌ Service Worker failed:', err));
+      });
+    }
+  </script>
+
+</body>
+</html>
