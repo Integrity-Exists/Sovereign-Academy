@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.integrityexists.sovereignacademypro",
+      "sha256_cert_fingerprints": [
+        "56:F9:2A:D8:62:96:7E:B3:54:76:E1:F6:F5:D6:95:E8:03:F3:EC:D4:1C:EB:9B:2D:8A:A4:BC:C6:96:4D:01:68"
+      ]
+    }
+  }
+]
