@@ -34,7 +34,7 @@
     "type": "image/png",
     "purpose": "any maskable"
   }
-],
+]
 
   "categories": ["education", "productivity", "utilities"],
   "protocol_handlers": [
