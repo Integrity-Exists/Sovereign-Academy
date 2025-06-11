@@ -35,26 +35,25 @@
     "sizes": "512x512",
     "type": "image/png",
     "purpose": "maskable"
+"screenshots": [
+  {
+    "src": "screenshot_home.png",
+    "type": "image/png",
+    "sizes": "720x1280",
+    "label": "Sovereign Academy Crest"
+  },
+  {
+    "src": "screenshot_features.png",
+    "type": "image/png",
+    "sizes": "720x1280",
+    "label": "Ask Sage Feature"
   }
 ],
 
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
-  "screenshots": [
-    {
-      "src": "screenshots/home.png",
-      "type": "image/png",
-      "sizes": "1280x720",
-      "label": "Home screen"
-    },
-    {
-      "src": "screenshots/features.png",
-      "type": "image/png",
-      "sizes": "1280x720",
-      "label": "Key features"
-    }
-  ],
+,
   "categories": ["education", "productivity", "utilities"],
   "protocol_handlers": [
     {
