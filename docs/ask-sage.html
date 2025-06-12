@@ -1,129 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#000000" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icons/icon-192x192.png" type="image/png" />
-  <link rel="apple-touch-icon" href="icons/icon-512x512.png" />
-  <title>Sovereign Academy - Ask Sage</title>
+  <meta charset="UTF-8">
+  <title>Ask Sage - Sovereign Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --primary-color: #2C3E50;
-      --secondary-color: #F4D03F;
-      --accent-color: #ECF0F1;
-    }
     body {
-      background-color: var(--accent-color);
-      color: var(--primary-color);
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
     }
-    .navbar {
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      padding: 1rem;
-      font-size: 24px;
-      text-align: center;
+
+    #sageChatBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2C3E50;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 1000;
     }
-    .navbar a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      margin: 0 10px;
+
+    #sageChatWindow {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      background: white;
+      border: 2px solid #2C3E50;
+      border-radius: 10px;
+      z-index: 1001;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
-    h1 {
-      color: var(--primary-color);
-      text-align: center;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "⚖️ ";
-      margin-right: 5px;
-    }
-    form {
-      margin-top: 20px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    input, textarea {
-      width: 100%;
+
+    #sageChatHeader {
+      background-color: #2C3E50;
+      color: white;
       padding: 10px;
-      margin: 5px 0 15px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
+      font-weight: bold;
     }
-    button {
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
-      padding: 10px 20px;
-      border-radius: 5px;
+
+    #sageMessages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    #sageInputForm {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    #sageInput {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-right: 1px solid #ccc;
+    }
+
+    #sageSendBtn {
+      padding: 8px 10px;
+      background-color: #2C3E50;
+      color: white;
       border: none;
       cursor: pointer;
     }
-    p, h2 {
+
+    #sageFootnote {
+      padding: 10px;
+      font-size: 0.85em;
+      color: #555;
       text-align: center;
+    }
+
+    a {
+      color: #2C3E50;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <div class="navbar">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="court-prep.html">Court Prep</a> |
-    <a href="dss-defense.html">DSS Defense</a>
+<h2 style="text-align:center; margin-top:30px;">Ask Sage – Your Legal AI Companion</h2>
+<p style="text-align:center;">Click the 💬 button in the corner to start a chat. Sage is listening.</p>
+
+<!-- Chat Button -->
+<button id="sageChatBtn">💬 Ask Sage</button>
+
+<!-- Chat Window -->
+<div id="sageChatWindow">
+  <div id="sageChatHeader">Sage - Legal AI Coach</div>
+  <div id="sageMessages">
+    <p><strong>Sage:</strong> What’s going on? Hit me with your question.</p>
   </div>
-
-  <h1>Ask Sage</h1>
-
-  <p><strong>Need help navigating court, DSS, housing problems, custody disputes, or criminal charges?</strong><br>
-  You're not alone. <strong>Ask Sage</strong> is your built-in AI companion — trained by Gina to help you understand your options, prepare documents, and take your power back. Ask anything. Any time.</p>
-
-  <h2>💬 Submit a Question</h2>
-  <form action="https://formspree.io/f/xeogkwoe" method="POST">
-    <label for="name">Your Name:</label><br>
-    <input type="text" name="name" id="name" required><br>
-    <label for="email">Your Email:</label><br>
-    <input type="email" name="_replyto" id="email" required><br>
-    <label for="question">Your Question:</label><br>
-    <textarea name="message" id="question" rows="5" required></textarea><br>
-    <button type="submit">Submit Question</button>
+  <form id="sageInputForm">
+    <input type="text" id="sageInput" placeholder="Type your question..." />
+    <button type="submit" id="sageSendBtn">Send</button>
   </form>
+  <div id="sageFootnote">
+    🛠️ Didn’t find the answer you were looking for?<br>
+    <a href="mailto:admin@integrityexists.com">Let us know</a> — we’re still building Sage from real questions like yours.
+  </div>
+</div>
 
-  <h2>🔍 What Can I Ask Sage?</h2>
-  <ul>
-    <li>📁 How do I file a custody modification?</li>
-    <li>🏠 What are my rights if my landlord shuts off the water?</li>
-    <li>⚖️ What does a Motion to Dismiss look like?</li>
-    <li>📜 Can I subpoena DSS records?</li>
-    <li>🔫 How do I get my gun rights back after a felony?</li>
-    <li>🚔 Do I have to let police search my home?</li>
-    <li>🧠 What's the difference between Pro Se and Sui Juris?</li>
-  </ul>
+<script>
+  const chatBtn = document.getElementById('sageChatBtn');
+  const chatWindow = document.getElementById('sageChatWindow');
+  const chatForm = document.getElementById('sageInputForm');
+  const chatInput = document.getElementById('sageInput');
+  const chatMsgs = document.getElementById('sageMessages');
+  const endpoint = 'https://ask-sage-g5hds2ybd-gina-lopezs-projects.vercel.app/api/chat';
 
-  <p><em>Don’t see your issue? Type it in the form — Sage will figure it out with you.</em></p>
-  <p style="text-align: center;"><a href="index.html">⬅️ Return to Home</a></p>
+  chatBtn.onclick = () => {
+    chatWindow.style.display = (chatWindow.style.display === 'none' || chatWindow.style.display === '') ? 'flex' : 'none';
+  };
 
-  <!-- Start of Tawk.to Script -->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/681d203afe55ac190d5636e6/1iqosbpkt';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
-  <!-- End of Tawk.to Script -->
+  chatForm.onsubmit = async (e) => {
+    e.preventDefault();
+    const userMsg = chatInput.value.trim();
+    if (!userMsg) return;
+    chatMsgs.innerHTML += `<p><strong>You:</strong> ${userMsg}</p>`;
+    chatInput.value = '';
 
+    const topic = localStorage.getItem('userTopic') || 'general';
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMsg, topic })
+      });
+
+      const data = await response.json();
+      chatMsgs.innerHTML += `<p><strong>Sage:</strong> ${data.reply}</p>`;
+    } catch (err) {
+      chatMsgs.innerHTML += `<p><strong>Sage:</strong> Hmm... something glitched. Try again in a bit.</p>`;
+    }
+
+    chatMsgs.scrollTop = chatMsgs.scrollHeight;
+  };
+
+  function selectTopic(topic) {
+    localStorage.setItem('userTopic', topic);
+    alert(`Topic selected: ${topic}. Sage will tailor your help.`);
+  }
+</script>
 
 </body>
 </html>
