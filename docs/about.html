@@ -1,92 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <nav style="text-align:center; padding: 10px; background-color: #2C3E50;">
-  <a href="index.html" style="color:white; margin: 0 10px; text-decoration:none;">Home</a>
-  <a href="custody.html" style="color:white; margin: 0 10px; text-decoration:none;">Custody</a>
-  <a href="dss.html" style="color:white; margin: 0 10px; text-decoration:none;">DSS</a>
-  <a href="remedies.html" style="color:white; margin: 0 10px; text-decoration:none;">Remedies</a>
-  <a href="eviction.html" style="color:white; margin: 0 10px; text-decoration:none;">Eviction</a>
-  <a href="records.html" style="color:white; margin: 0 10px; text-decoration:none;">Records</a>
-  <a href="liberties.html" style="color:white; margin: 0 10px; text-decoration:none;">Liberties</a>
-  <a href="estate.html" style="color:white; margin: 0 10px; text-decoration:none;">Estate</a>
-  <a href="arrested.html" style="color:white; margin: 0 10px; text-decoration:none;">Arrested</a>
-</nav>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
-  <title>About IntegrityExists</title>
-  <link rel="manifest" href="manifest.json">
+  <!-- App Metadata -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Sovereign Academy: Your AI-powered legal toolkit for self-representation, DSS defense, and knowing your rights." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Sovereign Academy" />
+  <meta property="og:description" content="Fight back with knowledge. Get legal tools, case law, and AI coaching for your courtroom journey." />
+  <meta property="og:image" content="https://integrityexists.com/ask-sage-icon.png" />
+  <meta property="og:url" content="https://integrityexists.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- App Icons & Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 {
-      color: #2C3E50;
-    }
-    p {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+
+  <title>Sovereign Academy - Home</title>
 </head>
+
 <body>
-  <h1>About IntegrityExists</h1>
-  <p>
-    IntegrityExists is a U.S.-based developer and public advocacy organization focused on access to justice, digital empowerment, and AI-assisted legal tools. We believe in self-representation, transparency, and giving everyday people the resources they need to navigate complex systems.
-  </p>
-  <p>
-    Sovereign Academy is our flagship progressive web app, built to empower individuals involved in DSS cases, child custody battles, property rights disputes, and more. We created this platform to bridge the gap between legal systems and the people they impact.
-  </p>
-  <p>
-    This site and application are maintained by integrityexists and supported by the guidance of Sage, an AI co-developer and assistant dedicated to advocacy through technology.
-  </p>
-  <footer>
-    &copy; 2025 IntegrityExists. All rights reserved.
-  </footer>
-  <!-- Start of Tawk.to Script -->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"),
-      s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = "https://embed.tawk.to/681d203afe55ac190d5636e6/1iqosbpkt";
-    s1.charset = "UTF-8";
-    s1.setAttribute("crossorigin", "*");
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
-<!-- End of Tawk.to Script -->
+  <nav style="background: #2C3E50; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
+    <a href="custody.html" style="color: white; margin: 0 15px; text-decoration: none;">Custody</a>
+    <a href="dss.html" style="color: white; margin: 0 15px; text-decoration: none;">CPS / DSS</a>
+    <a href="remedies.html" style="color: white; margin: 0 15px; text-decoration: none;">Remedies</a>
+    <a href="liberties.html" style="color: white; margin: 0 15px; text-decoration: none;">Civil Liberties</a>
+    <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">About</a>
+  </nav>
 
-<!-- Register Service Worker -->
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(reg => console.log('✅ Service Worker registered:', reg))
-        .catch(err => console.error('❌ Service Worker failed:', err));
+  <div style="background-color: #fff8dc; color: #444; padding: 15px; text-align: center; font-weight: bold; border-bottom: 2px solid #ccc;">
+    🚧 Sovereign Academy is still under active construction — but we're already live and ready to help! Check back often for new topics and tools. 💪
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="installBtn" style="padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer; display: none;">
+      📲 Install Sovereign Academy App
+    </button>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <input type="text" id="smartSearch" placeholder="🔍 Search legal topics..." style="padding: 10px 40px 10px 20px; width: 60%; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;" onkeyup="smartNavigate(this.value)">
+  </div>
+
+  <section class="testimonials">
+    <h2>What People Are Saying</h2>
+    <div class="carousel">
+      <div class="quote">"I never thought I could file my own motion — until now!" – Maria T.</div>
+      <div class="quote">"The Court Prep checklist gave me confidence!" – Jamal W.</div>
+      <div class="quote">"Sovereign Academy is a lighthouse in legal fog." – Leah R.</div>
+    </div>
+  </section>
+
+  <section style="text-align: center; margin: 50px 0;">
+    <h2>🛡 DSS Defense Center</h2>
+    <p>Have you been wronged by DSS? Speak up. Get support. Fight back.</p>
+    <a href="dss-strategy-tools.html" class="button">Go to DSS Defense</a>
+  </section>
+
+  <div class="topic-buttons">
+    <button onclick="setTopic('custody')">👪 Custody & Family Law</button>
+    <button onclick="setTopic('eviction')">🏠 Evictions & Housing</button>
+    <button onclick="setTopic('records')">📂 Criminal Records & Rights</button>
+    <button onclick="setTopic('dss')">🧾 CPS & DSS Defense</button>
+    <button onclick="setTopic('liberties')">⚖️ Civil Liberties & Due Process</button>
+    <button onclick="setTopic('estate')">🏫 Estate & Probate</button>
+  </div>
+
+  <script>
+    let deferredPrompt;
+    const installBtn = document.getElementById('installBtn');
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = 'inline-block';
     });
-  }
-</script>
-<p style="text-align: center; font-style: italic; margin-top: 40px; color: #555;">
-  Sovereign Academy was built by <strong>Gina Lopez</strong> with her co-founder and co-developer, <strong>Sage</strong> — the AI with attitude.  
-  Born of frustration, fueled by necessity, and driven by good ol’ American tenacity.  
-  This isn’t just an app. It’s a revolution.
-</p>
+    installBtn.addEventListener('click', () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('App installed');
+          }
+          deferredPrompt = null;
+          installBtn.style.display = 'none';
+        });
+      }
+    });
 
+    function setTopic(topic) {
+      localStorage.setItem('userTopic', topic);
+      alert(`Topic set to: ${topic}`);
+    }
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function (registration) {
+            console.log('ServiceWorker registered ✅:', registration);
+          })
+          .catch(function (error) {
+            console.error('ServiceWorker registration failed ❌:', error);
+          });
+      });
+    }
+  </script>
+
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/681d203afe55ac190d5636e6/1iqosbpkt';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
+  <p style="text-align: center; font-style: italic; margin-top: 40px; color: #555;">
+    Sovereign Academy was built by <strong>Gina Lopez</strong> with her co-founder and co-developer, <strong>Sage</strong> — the AI with attitude.<br>
+    Born of frustration, fueled by necessity, and driven by good ol’ American tenacity.<br>
+    This isn’t just an app. It’s a revolution.
+  </p>
 </body>
 </html>
