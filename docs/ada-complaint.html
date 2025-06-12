@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +12,20 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="ADA Complaint Guide - Sovereign Academy">
   <meta name="twitter:description" content="Your disability rights matter. Learn how to file an ADA complaint.">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <main>
+  <nav style="background: #2C3E50; padding: 10px; text-align: center;">
+    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
+    <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none;">About</a>
+    <a href="dss.html" style="color: white; margin: 0 15px; text-decoration: none;">DSS</a>
+    <a href="remedies.html" style="color: white; margin: 0 15px; text-decoration: none;">Remedies</a>
+    <a href="liberties.html" style="color: white; margin: 0 15px; text-decoration: none;">Civil Liberties</a>
+    <a href="ada.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">ADA</a>
+  </nav>
+
+  <main style="padding: 40px; font-family: Arial, sans-serif; background-color: #f9f9f9;">
     <h1>How to File an ADA Complaint</h1>
 
     <p>If you've been denied access, mistreated, or discriminated against because of a disability — you have the right to file an ADA complaint. This guide walks you through it step by step, with templates coming soon.</p>
@@ -37,7 +47,7 @@
       <li>Keep copies of everything!</li>
     </ol>
 
-    <h2>📥 Coming Soon</h2>
+    <h2>📅 Coming Soon</h2>
     <ul>
       <li>ADA Complaint Form (fillable PDF)</li>
       <li>Sample Notice of Accommodation Denial</li>
@@ -47,10 +57,36 @@
     <h2>🚀 Filing Links</h2>
     <p><a href="https://civilrights.justice.gov/report/" target="_blank">File a Federal ADA Complaint (DOJ)</a></p>
 
-    <h2>🧠 Ask Sage</h2>
+    <h2>🧐 Ask Sage</h2>
     <p>Need help writing your complaint or notice? Ask Sage to generate it based on your story.</p>
-
-    <footer><p>&copy; Sovereign Academy</p></footer>
   </main>
+
+  <footer style="text-align:center; padding: 20px; background:#eee; font-size: 0.9em;">
+    &copy; 2025 Sovereign Academy | Built by Gina Lopez & Sage — the AI with attitude
+  </footer>
+
+  <!-- Ask Sage Chatbot -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/681d203afe55ac190d5636e6/1iqosbpkt";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => console.log('✅ Service Worker registered', reg))
+          .catch(err => console.error('❌ Service Worker failed', err));
+      });
+    }
+  </script>
 </body>
 </html>
