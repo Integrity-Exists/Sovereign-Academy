@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Legal Remedies for Incarcerated Individuals</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="smart-search.js" defer></script>
+  <script src="voice-search.js" defer></script>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
       background-color: #f9f9f9;
-      color: #2c3e50;
+      padding: 20px;
+      margin: 0;
     }
     h1 {
       text-align: center;
@@ -23,7 +23,23 @@
       max-width: 700px;
       margin: 10px auto 30px;
     }
-    #sageChatWindow {
+    .search-area {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .search-area input {
+      padding: 10px;
+      width: 60%;
+      font-size: 16px;
+    }
+    .voice-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    iframe#sageChatWindow {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -32,57 +48,21 @@
       border: none;
       z-index: 999;
     }
-    .search-container {
-      text-align: center;
-      margin-top: 40px;
-      position: relative;
-    }
-    #smartSearch {
-      padding: 10px 40px 10px 20px;
-      width: 60%;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .search-icon {
-      position: absolute;
-      right: 22%;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 18px;
-      color: #999;
-    }
   </style>
 </head>
 <body>
+  <h1>Legal Remedies for Incarcerated Individuals</h1>
+  <p>If you're locked up or advocating for someone who is, this is where the fight starts. Learn about state and federal remedies including habeas corpus, sentence reduction motions, compassionate release, and clemency options. Sage can help break down what’s possible and how to begin.</p>
 
-  <div class="search-container">
-    <input type="text" id="smartSearch" placeholder="🔍 Search legal topics..." onkeyup="smartNavigate(this.value)">
-    <span class="search-icon">🔍</span>
+  <!-- Smart Search + Voice -->
+  <div class="search-area">
+    <input type="text" id="smartSearch" placeholder="Search legal topics..." onkeyup="smartNavigate(this.value)" />
+    <br />
+    <button class="voice-btn" onclick="startVoiceSearch()">🎤 Voice Search</button>
   </div>
 
-  <h1>Legal Remedies for Incarcerated Individuals</h1>
-  <p>If you're locked up — or fighting for someone who is — this is where the fight begins. Learn about:
-    <ul style="max-width: 700px; margin: 0 auto 30px; padding-left: 1.2em;">
-      <li>📜 <strong>Habeas Corpus</strong>: Challenge unlawful detention</li>
-      <li>📉 <strong>Sentence Reductions</strong>: Based on new laws, facts, or rehabilitation</li>
-      <li>❤️ <strong>Compassionate Release</strong>: For health, age, or hardship</li>
-      <li>🖋️ <strong>Clemency & Pardons</strong>: Petitions to the governor or president</li>
-    </ul>
-    <p style="text-align:center;"><strong>Ask Sage for strategy templates and state-specific remedies.</strong></p>
-  </p>
+  <!-- Sage Chat Embed -->
+  <iframe id="sageChatWindow" src="ask-sage.html"></iframe>
 
-  <iframe id="sageChatWindow" src="sage-chatbot.html"></iframe>
-
-  <script src="smart-search.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(reg => console.log('Service Worker registered ✅', reg))
-          .catch(err => console.error('Service Worker registration failed ❌', err));
-      });
-    }
-  </script>
 </body>
 </html>
