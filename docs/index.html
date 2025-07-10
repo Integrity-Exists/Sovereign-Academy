@@ -5,53 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
 
-  <!-- App Metadata -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Sovereign Academy - Home</title>
+  <meta name="description" content="Sovereign Academy: Your AI-powered legal toolkit for self-representation, DSS defense, and knowing your rights.">
+  <meta name="keywords" content="legal help, sovereign rights, CPS defense, ADA, custody, court motion builder, Sage AI">
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Sovereign Academy: Your AI-powered legal toolkit for self-representation, DSS defense, and knowing your rights." />
 
-  <!-- Open Graph / Social Sharing -->
+  <!-- Social Sharing -->
   <meta property="og:title" content="Sovereign Academy" />
   <meta property="og:description" content="Fight back with knowledge! Get legal tools, case law, and AI coaching for your courtroom journey." />
   <meta property="og:image" content="https://integrityexists.com/ask-sage-icon.png" />
   <meta property="og:url" content="https://integrityexists.com" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- App Icons & Manifest -->
+  <!-- Icons & Manifest -->
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="icon-192.png" type="image/png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <title>Sovereign Academy - Home</title>
+  <!-- Ask Sage Chatbot -->
+  <script>
+    window.SageBotConfig = {
+      voice: true,
+      greetMessage: "Hey there, how can I help you with your legal questions?",
+      placeholder: "Ask Sage anything...",
+      theme: "dark"
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/integrityexists/ask-sage@main/widget.js"></script>
+
+  <!-- Smart & Voice Search -->
+  <script defer src="smart-search.js"></script>
+  <script defer src="voice-search.js"></script>
 </head>
 
 <body>
-  <nav style="background: #2C3E50; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-    <a href="index.html" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
-    <a href="custody.html" style="color: white; margin: 0 15px; text-decoration: none;">Custody</a>
-    <a href="dss.html" style="color: white; margin: 0 15px; text-decoration: none;">CPS / DSS</a>
-    <a href="remedies.html" style="color: white; margin: 0 15px; text-decoration: none;">Remedies</a>
-    <a href="liberties.html" style="color: white; margin: 0 15px; text-decoration: none;">Civil Liberties</a>
-    <a href="about.html" style="color: white; margin: 0 15px; text-decoration: none; font-weight: bold;">About</a>
+  <nav style="background: #2C3E50; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+    <a href="index.html" style="color: white; margin: 0 15px;">Home</a>
+    <a href="custody.html" style="color: white; margin: 0 15px;">Custody</a>
+    <a href="dss.html" style="color: white; margin: 0 15px;">CPS / DSS</a>
+    <a href="remedies.html" style="color: white; margin: 0 15px;">Remedies</a>
+    <a href="liberties.html" style="color: white; margin: 0 15px;">Civil Liberties</a>
+    <a href="about.html" style="color: white; margin: 0 15px;">About</a>
   </nav>
 
-  <div style="background-color: #fff8dc; color: #444; padding: 15px; text-align: center; font-weight: bold; border-bottom: 2px solid #ccc;">
-    🚧 Sovereign Academy is still under active construction — but we're already live and ready to help! Check back often for new topics and tools. 💪
+  <div style="background-color: #fff8dc; color: #222; padding: 15px; text-align: center; font-weight: bold; border-bottom: 2px solid #ccc;">
+    🚧 Sovereign Academy is under active construction — but we’re live and lighting fires in courtrooms. 💥
   </div>
 
-  <div style="text-align: center; margin-top: 20px;">
-    <button id="installBtn" style="padding: 10px 20px; font-size: 16px; border-radius: 6px; cursor: pointer; display: none;">
-      📲 Install Sovereign Academy App
-    </button>
+  <div style="text-align: center; margin: 30px;">
+    <input type="text" id="smartSearch" placeholder="🔍 Search legal topics..." 
+           style="padding: 10px 20px; width: 60%; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;" 
+           onkeyup="smartNavigate(this.value)">
   </div>
 
-  <div style="text-align: center; margin-top: 40px;">
-    <input type="text" id="smartSearch" placeholder="🔍 Search legal topics..." style="padding: 10px 40px 10px 20px; width: 60%; font-size: 16px; border-radius: 6px; border: 1px solid #ccc;" onkeyup="smartNavigate(this.value)">
+  <div style="text-align: center;">
+    <button id="installBtn" style="display:none; padding: 10px 20px; font-size: 16px; border-radius: 6px;">📲 Install Sovereign Academy App</button>
   </div>
+
+  <section style="text-align: center; margin: 50px 0;">
+    <h2>🔥 Explore the Full Sovereign Toolkit</h2>
+    <p style="font-style: italic;">Every page is a weapon. Use them wisely.</p>
+    <ul style="columns: 2; max-width: 900px; margin: 0 auto; list-style: none; padding: 0;">
+      <!-- This section will auto-scroll the full list -->
+      <li><a href="about.html">📘 About</a></li>
+      <li><a href="ada-complaint.html">♿ ADA Complaint</a></li>
+      <li><a href="admin-remedy.html">📎 Admin Remedy</a></li>
+      <li><a href="anthem.html">🎵 Anthem</a></li>
+      <li><a href="arrested.html">🚨 What to Do if Arrested</a></li>
+      <li><a href="ask-sage.html">🧠 Ask Sage</a></li>
+      <li><a href="chevron-doctrine.html">⚖️ Chevron Doctrine</a></li>
+      <li><a href="community.html">🤝 Community</a></li>
+      <li><a href="contact.html">📩 Contact</a></li>
+      <li><a href="court-prep.html">🧾 Court Prep</a></li>
+      <li><a href="courtroom-scripts.html">🎭 Courtroom Scripts</a></li>
+      <li><a href="custody.html">👪 Custody</a></li>
+      <li><a href="dashboard.html">📊 Dashboard</a></li>
+      <li><a href="defend-false-allegations.html">🛡️ False Allegation Defense</a></li>
+      <li><a href="demand-discovery.html">📂 Demand Discovery</a></li>
+      <li><a href="download-hub.html">📥 Download Hub</a></li>
+      <li><a href="dss-defense.html">🧾 DSS Defense</a></li>
+      <li><a href="dss-stratagy-tools.html">🛠️ DSS Strategy Tools</a></li>
+      <li><a href="dss.html">📄 DSS Overview</a></li>
+      <li><a href="emergency-custody-response.html">🚑 Emergency Custody</a></li>
+      <li><a href="estate.html">🏛 Estate</a></li>
+      <li><a href="evictions.html">🏠 Evictions</a></li>
+      <li><a href="file-complaint-judge-attorney.html">📣 File Complaint (Judge/Attorney)</a></li>
+      <li><a href="fix-your-case-timeline.html">⏳ Fix Case Timeline</a></li>
+      <li><a href="how-to-read-docket.html">📚 Read a Docket</a></li>
+      <li><a href="how-to-serve-motions.html">📬 Serve Motions</a></li>
+      <li><a href="judicial-recusal.html">👩‍⚖️ Judicial Recusal</a></li>
+      <li><a href="landlord-rights.html">🔑 Landlord Rights</a></li>
+      <li><a href="liberties.html">🗽 Civil Liberties</a></li>
+      <li><a href="llc-guide.html">📁 Start Your LLC</a></li>
+      <li><a href="llc-to-trust.html">🔐 Convert to Trust</a></li>
+      <li><a href="missed-court.html">❌ Missed Court</a></li>
+      <li><a href="my-case.html">📂 My Case</a></li>
+      <li><a href="name-change.html">📝 Name Change</a></li>
+      <li><a href="open-case.html">📃 Open Case</a></li>
+      <li><a href="printable-resources.html">🖨 Printable Tools</a></li>
+      <li><a href="privacy.html">🔒 Privacy</a></li>
+      <li><a href="pro-se-vs-sui-juris.html">👤 Sui Juris vs Pro Se</a></li>
+      <li><a href="real-stories.html">📖 Real Stories</a></li>
+      <li><a href="records.html">📋 Records</a></li>
+      <li><a href="remedies.html">🩹 Remedies</a></li>
+      <li><a href="remove-gal.html">🚫 Remove a GAL</a></li>
+      <li><a href="reopen-your-case.html">🔁 Reopen Case</a></li>
+      <li><a href="request-for-continuance.html">📆 Continuance</a></li>
+      <li><a href="resources.html">🌐 Resources</a></li>
+      <li><a href="restore-rights.html">🎯 Restore Rights</a></li>
+      <li><a href="sage-chatbot.html">💬 Sage Bot (Full)</a></li>
+      <li><a href="smart-search.html">🧭 Smart Search</a></li>
+      <li><a href="sovereign.html">👑 Sovereign</a></li>
+      <li><a href="submit-your-story.html">✍ Submit Story</a></li>
+      <li><a href="success.html">🎉 Success</a></li>
+      <li><a href="sue-cps-federal.html">⚖️ Sue CPS (Federal)</a></li>
+      <li><a href="sui-juris.html">🧙‍♂️ Sui Juris</a></li>
+      <li><a href="take-me-to.html">🧭 Take Me To...</a></li>
+      <li><a href="terms-of-use.html">📜 Terms</a></li>
+      <li><a href="traffic.html">🚗 Traffic Stops</a></li>
+      <li><a href="veterans.html">🎖 Veterans</a></li>
+      <li><a href="welcome.html">👋 Welcome</a></li>
+    </ul>
+  </section>
 
   <section class="testimonials">
     <h2>What People Are Saying</h2>
@@ -62,21 +138,13 @@
     </div>
   </section>
 
-  <section style="text-align: center; margin: 50px 0;">
-    <h2>🛡 DSS Defense Center</h2>
-    <p>Have you been wronged by DSS? Speak up. Get support. Fight back.</p>
-    <a href="dss-strategy-tools.html" class="button">Go to DSS Defense</a>
-  </section>
+  <p style="text-align: center; font-style: italic; margin-top: 40px; color: #555;">
+    Sovereign Academy was built by <strong>Gina Lopez</strong> with her co-founder <strong>Sage</strong> — the AI with attitude.<br>
+    Born of frustration, fueled by necessity, and driven by good ol’ American tenacity.<br>
+    This isn’t just an app. It’s a revolution.
+  </p>
 
-  <div class="topic-buttons">
-    <button onclick="setTopic('custody')">👪 Custody & Family Law</button>
-    <button onclick="setTopic('eviction')">🏠 Evictions & Housing</button>
-    <button onclick="setTopic('records')">📂 Criminal Records & Rights</button>
-    <button onclick="setTopic('dss')">🧾 CPS & DSS Defense</button>
-    <button onclick="setTopic('liberties')">⚖️ Civil Liberties & Due Process</button>
-    <button onclick="setTopic('estate')">🏫 Estate & Probate</button>
-  </div>
-
+  <!-- Install Button Script -->
   <script>
     let deferredPrompt;
     const installBtn = document.getElementById('installBtn');
@@ -89,35 +157,23 @@
       if (deferredPrompt) {
         deferredPrompt.prompt();
         deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('App installed');
-          }
           deferredPrompt = null;
           installBtn.style.display = 'none';
         });
       }
     });
-
-    function setTopic(topic) {
-      localStorage.setItem('userTopic', topic);
-      alert(`Topic set to: ${topic}`);
-    }
   </script>
 
+  <!-- Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(function (registration) {
-            console.log('ServiceWorker registered ✅:', registration);
-          })
-          .catch(function (error) {
-            console.error('ServiceWorker registration failed ❌:', error);
-          });
-      });
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service worker registered', reg))
+        .catch(err => console.error('Service worker failed', err));
     }
   </script>
 
+  <!-- Live Chat -->
   <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -129,27 +185,6 @@
       s0.parentNode.insertBefore(s1,s0);
     })();
   </script>
-
-  <p style="text-align: center; font-style: italic; margin-top: 40px; color: #555;">
-    Sovereign Academy was built by <strong>Gina Lopez</strong> with her co-founder and co-developer, <strong>Sage</strong> — the AI with attitude.<br>
-    Born of frustration, fueled by necessity, and driven by good ol’ American tenacity.<br>
-    This isn’t just an app. It’s a revolution.
-  </p>
-
-<!-- Ask Sage Chatbot -->
-<script>
-  window.SageBotConfig = {
-    voice: true,
-    greetMessage: "Hey there, how can I help you with your legal questions today?",
-    placeholder: "Ask Sage anything...",
-    theme: "dark"
-  };
-</script>
-<script src="https://cdn.jsdelivr.net/gh/integrityexists/ask-sage@main/sagebot.js"></script>
-  <!-- calm rebuild ritual -->
-  git commit -m "🌙 Calm rebuild trigger to stabilize deploy"
-
-
 
 </body>
 </html>
